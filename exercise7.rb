@@ -23,7 +23,7 @@ puts students.keys
 puts "New Cohort sizes after expansion:"
 def cohort(expansion)
 	expansion.each do |cohort, size|
-		puts "#{cohort.capitalize}: #{size.to_i * 1.05} students"
+		puts "#{cohort.capitalize}: #{(size.to_i * 1.05).round} students"
 	end
 end
 
@@ -34,4 +34,8 @@ students.delete(:cohort2)
 puts "New Cohort list without Cohort 2:"
 puts print_cohorts(students)
 
+#BONUS
+total = 0
+students.each { |cohort, size| total += size }
+puts total 
 
