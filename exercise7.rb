@@ -1,6 +1,6 @@
 def print_cohorts(printsizes)
 	printsizes.each do |cohort, size|
-		puts "#{cohort.capitalize} has #{size} students."
+		puts "#{cohort.capitalize}: #{size} students."
 	end
 end
 
@@ -11,4 +11,10 @@ students = {
 	:cohort3 => 22
 }
 
+puts "Cohort name and size:"
 puts print_cohorts(students)
+
+students[:cohort4] = 43
+"\n"
+puts "Cohort Names:"
+puts students.keys
