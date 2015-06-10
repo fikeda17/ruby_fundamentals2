@@ -30,11 +30,20 @@ else
 	puts "You don´t need to pick up bananas"
 end
 
+#Ouestion 5 answer - displaying second item in grocery list
 puts"\n"
 puts "The second item in the grocery list are: #{grocery_list[1]}."
 
+#Sorted out alphabetically - question 6
 puts"\n"
 puts "My grocery list sorted alphabetically is:"
 grocery_list.sort.each do |x|
 	puts "* #{x}" 
 end
+
+# Last question 
+puts"\n"
+grocery_list.delete ("salmon")
+puts "My grocery list without salmon, sorted alphabetically is:"
+grocery_print(grocery_list)
+
